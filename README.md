@@ -5,6 +5,6 @@ This is **pet-project** for testing some features:
 *the list will continue to grow*
 
 Also this project includes:
-- domainSSL certificate for ***https:/www.psymiro.com***
+- domainSSL certificate for **https://www.psymiro.com**
 
 What about **project target** - the first step is to develop the **board** with some **kudos of yours**.
