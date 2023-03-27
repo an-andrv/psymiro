@@ -1,7 +1,16 @@
+<mat-spinner *ngIf="false" color="accent"></mat-spinner>
+
 <div class="wrapper">
-  <h1>Hi there!</h1>
-  <h2>Website is under preparation:)</h2>
+  <app-header class="wrapper__header"></app-header>
+
+  <div *ngIf="false" class="wrapper__message">
+    <h1>Hi there!</h1>
+    <h2>Website is under preparation:)</h2>
+  </div>
+  
+  
+  <router-outlet></router-outlet>
+  
+  <app-footer class="wrapper__footer"></app-footer>
 </div>
 
-
-<router-outlet></router-outlet>

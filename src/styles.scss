@@ -1,4 +1,13 @@
-body,
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -7,10 +16,4 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-.cover {
-  background-image: url("./assets/img/pineapple.png");
-  background-repeat: repeat;
-  background-position: right;
 }

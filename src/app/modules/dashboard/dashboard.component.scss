@@ -1,0 +1,15 @@
+@import '../../../assets/styles/shared.scss';
+
+.dashboard {
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 128px;
+    color: $color-white;
+  }
+
+  &__wrapper {
+    margin: 0 32px;
+  }
+}

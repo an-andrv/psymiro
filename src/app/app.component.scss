@@ -1,20 +1,37 @@
+@import "../assets/styles/shared.scss";
+
 :host {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
-  color: #333;
+  color: $color-white;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
-  width: 100%;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  color: #fff;
+  background-image: url("../assets/img/cover/pineapple.png");
+  background-repeat: repeat;
+  background-position: right;
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__footer {
+    margin-top: 32px;
+  }
+
+  &__message {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 /* Responsive Styles */
