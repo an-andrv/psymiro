@@ -1,4 +1,4 @@
-This is **pet-project** for testing some features:
+This **Kudos Dashboard project** will continue some features:
 - github CI/CD
 - Angular SSR
 - ...
