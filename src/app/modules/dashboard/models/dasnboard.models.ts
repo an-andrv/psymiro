@@ -1,3 +1,11 @@
+export interface Img {
+  src: string;
+  cols: number;
+  rows: number;
+  color: string;
+  isVideo: boolean;
+}
+
 export enum Colors {
   pink = '#f2296f60',
   blue = '#1076af60',
@@ -5,4 +13,3 @@ export enum Colors {
   cyan = '#62aab560',
   darkcyan = '#1b7b8560',
 }
-

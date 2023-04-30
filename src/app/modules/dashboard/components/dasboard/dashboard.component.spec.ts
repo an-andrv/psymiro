@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { of } from 'rxjs';
 
 import { DashboardComponent } from './dashboard.component';
 
@@ -16,6 +17,7 @@ describe('DashboardComponent', () => {
 
     fixture = TestBed.createComponent(DashboardComponent);
     component = fixture.componentInstance;
+    component.list$ = of([]);
     fixture.detectChanges();
   });
 

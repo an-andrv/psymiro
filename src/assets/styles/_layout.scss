@@ -1,0 +1,17 @@
+@mixin main-inner($max-width: 1920px) {
+  display: block;
+  max-width: $max-width;
+  padding: 24px 20px 48px;
+
+  @media (min-width: 480px) {
+    padding: 24px 32px 48px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 48px 32px 64px;
+  }
+
+  @media (min-width: 1366px) {
+    padding: 48px 32px 64px 68px;
+  }
+}

@@ -1,5 +1,4 @@
-import { Img } from "../interfaces/dasnboard.interfaces";
-import { Colors } from "./dashboard.enum";
+import { Colors, Img } from "./dasnboard.models";
 
 export const GRATITUDE_LIST: Img[] = [
   { 
@@ -80,3 +79,5 @@ export const GRATITUDE_LIST: Img[] = [
     isVideo: false
   }
 ];
+
+
