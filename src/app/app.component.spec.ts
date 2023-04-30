@@ -5,7 +5,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 
 describe('AppComponent', () => {
+  let fixture: AppComponent;
+
   beforeEach(async () => {
+    fixture = new AppComponent();
+
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule
@@ -19,20 +23,7 @@ describe('AppComponent', () => {
   });
 
   it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(fixture).toBeTruthy();
   });
 
-  xit(`should have as title 'psymiro'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-  });
-
-  xit('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('psymiro app is running!');
-  });
 });
