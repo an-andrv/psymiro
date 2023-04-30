@@ -23,11 +23,13 @@
       "ES2022",
       "dom"
     ],
+    "esModuleInterop": true,
     "paths": {
+      "@styles/*": ["./assets/styles/"],
       "@environments/*": ["./environments/*"],
-      "@shared/*": ["./app/shared/*"],
       "@app/*": ["./app/*"],
-      "@styles/*": ["./assets/styles/"]
+      "@shared/*": ["./app/shared/*"],
+      "@mocks/*": ["./app/shared/mocks/*"]
     },
   },
   "angularCompilerOptions": {

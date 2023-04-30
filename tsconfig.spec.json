@@ -5,20 +5,17 @@
     "outDir": "./out-tsc/spec",
     "types": [
       "jest",
-      "node"
     ]
   },
-  "files": [
-    "setup.jest.ts"
-  ],
   "include": [
     "src/**/*.spec.ts",
     "src/**/*.d.ts"
   ],
   "paths": {
+    "@styles/*": ["./assets/styles/"],
     "@environments/*": ["./environments/*"],
-    "@shared/*": ["./app/shared/*"],
     "@app/*": ["./app/*"],
-    "@styles/*": ["./assets/styles/"]
+    "@shared/*": ["./app/shared/*"],
+    "@mocks/*": ["./app/shared/mocks/*"],
   }
 }
