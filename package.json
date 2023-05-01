@@ -6,9 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"    
+    "test": "jest --detectOpenHandles",
+    "test:watch": "jest --watch --no-cache --colors --detectOpenHandles",
+    "test:debug": "node --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --no-cache",
+    "test:coverage": "jest --coverage",
+    "cypress-component": "ng run psymiro:cypress-component",
+    "cypress-e2e": "ng run psymiro:cypress-e2e"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +36,8 @@
     "@angular-devkit/build-angular": "^15.0.2",
     "@angular/cli": "~15.0.2",
     "@angular/compiler-cli": "^15.0.0",
+    "@cypress/schematic": "^2.5.0",
+    "cypress": "^12.11.0",
     "typescript": "~4.8.2"
   }
 }

@@ -12,4 +12,18 @@
   &__wrapper {
     margin: 0 32px;
   }
+
+  &__likes {
+    margin: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(121, 41, 111, 0.376);
+  }
+
+  &__count {
+    margin: 0 16px;
+    font-weight: 700;
+    font-size: 16px;
+  }
 }

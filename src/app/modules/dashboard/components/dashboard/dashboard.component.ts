@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Img } from '../../models/dasnboard.models';
 import { CommentsService } from '../../services/comments.service';
@@ -11,8 +11,21 @@ import { CommentsService } from '../../services/comments.service';
 export class DashboardComponent {
   list$: Observable<Img[]>;
 
+  @Input() pageLikes = 0
+  @Output() change = new EventEmitter()
+
   constructor(private commentsService: CommentsService) {
     this.list$ = this.commentsService.getComments();
+  }
+
+  increment(): void {
+    this.pageLikes++
+    this.change.emit(this.pageLikes)
+  }
+
+  decrement(): void {
+    this.pageLikes--
+    this.change.emit(this.pageLikes)
   }
 
 }

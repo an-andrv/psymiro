@@ -1,5 +1,13 @@
 <h2 class="dashboard__title">~ Kudos dashboard ~</h2>
-
+<div class="dashboard__likes">
+  <button mat-mini-fab color="primary" aria-label="Minus" data-cy="decrement" (click)="decrement()">
+    <mat-icon>favorite_border</mat-icon>
+  </button>
+  <span class="dashboard__count" data-cy="counter">{{ pageLikes }}</span>
+  <button mat-mini-fab color="primary" aria-label="Plus" data-cy="increment" (click)="increment()">
+    <mat-icon>favorite</mat-icon>
+  </button>
+</div>
 <div class="dashboard__wrapper">
   <mat-grid-list cols="4" rowHeight="100px" gutterSize="8">
     <mat-grid-tile
