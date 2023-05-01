@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 // import { DEFAULT_LANGUAGE, SITE_LANGUAGES } from '@shared/models/translate.models';
-import { DEFAULT_LANGUAGE, SITE_LANGUAGES } from '../models/translate.models';
+import { DEFAULT_LANGUAGE, SITE_LANGUAGES } from '../../models/translate.models';
 
 
 @Injectable({
