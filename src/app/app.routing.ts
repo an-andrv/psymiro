@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 enum PageUrlEnum {
-  dashboard = 'dashboard'
+  dashboard = 'dashboard',
+  profile = 'profile'
 }
 
 const routes: Routes = [
   {
     path: '',
     children: [
-      { path: '', redirectTo: PageUrlEnum.dashboard, pathMatch: 'full' },
+      { path: '', redirectTo: PageUrlEnum.profile, pathMatch: 'full' },
+      { path: PageUrlEnum.profile, loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)},
       { path: PageUrlEnum.dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)}
     ]
   }

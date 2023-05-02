@@ -1,0 +1,8 @@
+<div *ngIf="info.token; else loggedOut">
+  <p>Username: {{ info.username }}</p>
+  <p>Token: {{info.token}}</p>
+</div>
+
+<ng-template #loggedOut>
+  Please, <span routerLink="login">login</span>.
+</ng-template>

@@ -1,0 +1,29 @@
+<div *ngIf="isLoggedIn; else loggedOut">
+  <p>Logged in as {{ roles[0] }}</p>
+</div>
+
+<ng-template #loggedOut>
+  <form name="loginForm" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div>
+      <label for="username">Name:</label>
+      <input type="text" name="username" [(ngModel)]="loginForm.username" id="" #username="ngModel" required>
+      <div *ngIf="f.submitted && username.invalid">
+        <div *ngIf="username.value.required">Username is required</div>
+      </div>
+    </div>
+    <div>
+      <label for="password">Password:</label>
+      <input type="password" name="password" [(ngModel)]="loginForm.password" id="" #password="ngModel" required minLength="6">
+      <div *ngIf="f.submitted && username.invalid">
+        <div *ngIf="password.value.required">Password is required</div>
+        <div *ngIf="password.invalid">Password must be at least 6 characters</div>
+      </div>
+    </div>
+    <div>
+      <button>Submit</button>
+      <div *ngIf="f.submitted && isLoginFailed">Error message {{ errorMessage }}</div>
+    </div>
+  </form>
+
+  <p>Dont have account? Go to <span routerLink="signup">sign up page</span></p>
+</ng-template>
