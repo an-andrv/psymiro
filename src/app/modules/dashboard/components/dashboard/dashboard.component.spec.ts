@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatGridListModule } from '@angular/material/grid-list';
+import { MaterialModule } from 'src/material.module';
 import { of } from 'rxjs';
 
 import { DashboardComponent } from './dashboard.component';
@@ -11,7 +11,7 @@ describe('DashboardComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
-      imports: [ MatGridListModule ]
+      imports: [ MaterialModule ]
     })
     .compileComponents();
 
