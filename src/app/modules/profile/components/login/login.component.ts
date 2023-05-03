@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { AuthLoginInfo } from 'src/app/shared/services/auth/auth.classes';
 import { AuthService } from 'src/app/shared/services/auth/auth.service';
@@ -10,14 +11,17 @@ import { TokenStorageService } from 'src/app/shared/services/auth/token-storage.
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
+  nameFormControl = new FormControl('', [Validators.required]);
+  passwordFormControl = new FormControl('', [Validators.required, Validators.maxLength(6)]);
+
   loginForm = {} as AuthLoginInfo;
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
+
   roles: string[] = [];
 
   private onDestroy$ = new Subject<true>();
-
 
   constructor(private tokenService: TokenStorageService, private authService: AuthService) { }
 

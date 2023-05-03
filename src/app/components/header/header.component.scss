@@ -1,9 +1,13 @@
 @import '../../../assets/styles/colors';
 
-h1 {
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 128px;
   background-color: #f2296f60;
+}
+
+h1 {
+  cursor: pointer;
 }

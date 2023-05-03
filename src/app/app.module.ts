@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from 'src/material.module';
 
 import { AppRoutingModule } from './app.routing';
 import { AppComponent } from './app.component';
+
 import { DashboardModule } from './modules/dashboard/dashboard.module';
+import { ProfileModule } from './modules/profile/profile.module';
+
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
-import { ProfileModule } from './modules/profile/profile.module';
+import { StartPageComponent } from './components/start-page/start-page.component';
 
 import { httpInterceptorProviders } from './shared/services/auth/auth-interceptor';
 
@@ -16,10 +20,12 @@ import { httpInterceptorProviders } from './shared/services/auth/auth-intercepto
   declarations: [
     AppComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    StartPageComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     DashboardModule,
     ProfileModule,

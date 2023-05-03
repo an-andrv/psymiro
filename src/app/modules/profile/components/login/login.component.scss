@@ -1,0 +1,14 @@
+@import '../../../../../assets/styles/colors';
+
+.login {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+
+  &__signup {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}

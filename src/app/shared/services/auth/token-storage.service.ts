@@ -40,7 +40,14 @@ export class TokenStorageService {
   }
 
   getAuthorities(): string[] {
-    const roles = JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY) ?? '') ?? [];
+    const roles: string[] = [];
+
+    if (sessionStorage.getItem(TOKEN_KEY)) {
+      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((el: string) => {
+        roles.push(el);
+      });
+    }
+
     return roles;
   }
 }

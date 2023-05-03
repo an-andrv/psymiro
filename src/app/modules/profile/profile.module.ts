@@ -4,9 +4,11 @@ import { ProfileComponent } from './profile.component';
 import { UserComponent } from './components/user/user.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileRoutingModule } from './profile.routing';
 import { HttpClientModule } from '@angular/common/http';
+import { MaterialModule } from 'src/material.module';
+
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     ProfileRoutingModule,
     FormsModule,
-    HttpClientModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MaterialModule
   ],
   bootstrap: [ProfileComponent]
 })

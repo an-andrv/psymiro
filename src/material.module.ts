@@ -50,8 +50,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 const cdkModules = [
   A11yModule,
   CdkAccordionModule,
@@ -107,15 +105,10 @@ const materialModules = [
   MatTreeModule,
 ];
 
-const browserModules = [
-  BrowserAnimationsModule,
-];
-
 @NgModule({
   exports: [
     cdkModules,
     materialModules,
-    browserModules,
   ]
 })
 export class MaterialModule {}

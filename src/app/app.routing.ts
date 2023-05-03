@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-enum PageUrlEnum {
-  dashboard = 'dashboard',
-  profile = 'profile'
-}
+import { StartPageComponent } from './components/start-page/start-page.component';
+import { PageUrlEnum } from './shared/models/urls.enum';
 
 const routes: Routes = [
   {
     path: '',
     children: [
-      { path: '', redirectTo: PageUrlEnum.profile, pathMatch: 'full' },
+      { path: '', component: StartPageComponent, pathMatch: 'full' },
       { path: PageUrlEnum.profile, loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)},
-      { path: PageUrlEnum.dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)}
+      { path: PageUrlEnum.dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
+      { path: PageUrlEnum.examples, loadChildren: () => import('./examples/examples.module').then(m => m.ExamplesModule)},
     ]
   }
 ];

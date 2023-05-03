@@ -1,22 +1,43 @@
-<div *ngIf="isLoggedIn; else loggedOut">
+<ng-container *ngIf="isLoggedIn; else loggedOut">
   <p>Logged in as {{ roles[0] }}</p>
-</div>
+</ng-container>
 
 <ng-template #loggedOut>
+
+  <form action="" class="login__form">
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input type="text" matInput [formControl]="nameFormControl">
+      <mat-error *ngIf="nameFormControl.hasError('required')">
+        Username is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input type="password" matInput [formControl]="passwordFormControl" autocomplete>
+      <mat-error *ngIf="passwordFormControl.hasError('required')">
+        Password is required
+      </mat-error>
+      <mat-error *ngIf="passwordFormControl.hasError('maxlength')">
+        Password must be at least 6 characters
+      </mat-error>
+    </mat-form-field>
+  </form>
+
   <form name="loginForm" (ngSubmit)="onSubmit()" #f="ngForm">
     <div>
       <label for="username">Name:</label>
-      <input type="text" name="username" [(ngModel)]="loginForm.username" id="" #username="ngModel" required>
-      <div *ngIf="f.submitted && username.invalid">
-        <div *ngIf="username.value.required">Username is required</div>
+      <input type="text" name="username" [(ngModel)]="loginForm.username" id="username" #u="ngModel" required>
+      <div *ngIf="f.submitted && u.invalid">
+        <div *ngIf="u.value.required">Username is required</div>
       </div>
     </div>
     <div>
       <label for="password">Password:</label>
-      <input type="password" name="password" [(ngModel)]="loginForm.password" id="" #password="ngModel" required minLength="6">
-      <div *ngIf="f.submitted && username.invalid">
-        <div *ngIf="password.value.required">Password is required</div>
-        <div *ngIf="password.invalid">Password must be at least 6 characters</div>
+      <input type="password" name="password" [(ngModel)]="loginForm.password" id="password" #p="ngModel" required minLength="6" autocomplete>
+      <div *ngIf="f.submitted && u.invalid">
+        <div *ngIf="p.value.required">Password is required</div>
+        <div *ngIf="p.invalid">Password must be at least 6 characters</div>
       </div>
     </div>
     <div>
@@ -25,5 +46,6 @@
     </div>
   </form>
 
-  <p>Dont have account? Go to <span routerLink="signup">sign up page</span></p>
+  <p>Dont have account? Go to <span class="login__signup" routerLink="/profile/signup">sign up page</span></p>
+
 </ng-template>
