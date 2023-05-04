@@ -10,7 +10,6 @@ const routes: Routes = [
       { path: '', component: StartPageComponent, pathMatch: 'full' },
       { path: PageUrlEnum.profile, loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)},
       { path: PageUrlEnum.dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
-      { path: PageUrlEnum.examples, loadChildren: () => import('./examples/examples.module').then(m => m.ExamplesModule)},
     ]
   }
 ];

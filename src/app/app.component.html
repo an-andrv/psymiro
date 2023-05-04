@@ -1,17 +1,24 @@
 <mat-spinner *ngIf="false" color="accent"></mat-spinner>
 
-<div class="wrapper">
-  <app-header class="wrapper__header"></app-header>
-
-  <div *ngIf="false" class="wrapper__message">
-    <h1>Hi there!</h1>
-    <h2>Website is under preparation:)</h2>
-  </div>
+<ng-container *ngIf="prodMod; else devMod">
+  <div class="wrapper wrapper--pineapple">
+    <app-header class="wrapper__header"></app-header>
   
-  <div class="wrapper__main">
-    <router-outlet></router-outlet>
+    <div *ngIf="false" class="wrapper__message">
+      <h1>Hi there!</h1>
+      <h2>Website is under preparation:)</h2>
+    </div>
+    
+    <div class="wrapper__main">
+      <router-outlet></router-outlet>
+    </div>
+    
+    <app-footer class="wrapper__footer"></app-footer>
   </div>
-  
-  <app-footer class="wrapper__footer"></app-footer>
-</div>
+</ng-container>
 
+<ng-template #devMod>
+  <div class="wrapper">
+    <app-example></app-example>
+  </div>
+</ng-template>

@@ -13,6 +13,7 @@ import { ProfileModule } from './modules/profile/profile.module';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { StartPageComponent } from './components/start-page/start-page.component';
+import { ExampleComponent } from './components/example/example.component';
 
 import { httpInterceptorProviders } from './shared/services/auth/auth-interceptor';
 
@@ -21,7 +22,8 @@ import { httpInterceptorProviders } from './shared/services/auth/auth-intercepto
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    StartPageComponent
+    StartPageComponent,
+    ExampleComponent
   ],
   imports: [
     BrowserModule,
