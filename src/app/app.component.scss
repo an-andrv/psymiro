@@ -13,8 +13,12 @@
   min-height: 100%;
   display: flex;
   flex-direction: column;
-  background-image: url("../assets/img/cover/pineapple.png");
-  background-repeat: repeat;
+
+  &--pineapple {
+    background-image: url("../assets/img/cover/pineapple.png");
+    background-repeat: repeat;
+    background-size: contain;
+  }
 
   &__header {
     margin-bottom: 32px;
