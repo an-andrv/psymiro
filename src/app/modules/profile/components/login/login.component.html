@@ -24,7 +24,7 @@
     </mat-form-field>
   </form>
 
-  <form name="loginForm" (ngSubmit)="onSubmit()" #f="ngForm">
+  <!-- <form name="loginForm" (ngSubmit)="onSubmit()" #f="ngForm">
     <div>
       <label for="username">Name:</label>
       <input type="text" name="username" [(ngModel)]="loginForm.username" id="username" #u="ngModel" required>
@@ -44,7 +44,7 @@
       <button>Submit</button>
       <div *ngIf="f.submitted && isLoginFailed">Error message {{ errorMessage }}</div>
     </div>
-  </form>
+  </form> -->
 
   <p>Dont have account? Go to <span class="login__signup" routerLink="/profile/signup">sign up page</span></p>
 

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PageUrlEnum } from 'src/app/shared/models/urls.enum';
+import { PageUrlEnum } from '../../shared/models/urls.enum';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { UserComponent } from './components/user/user.component';

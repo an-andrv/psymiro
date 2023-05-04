@@ -14,11 +14,11 @@
   }
 
   &__likes {
-    margin: 32px;
+    margin: 32px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(121, 41, 111, 0.376);
+    background: #edff2160;
   }
 
   &__count {

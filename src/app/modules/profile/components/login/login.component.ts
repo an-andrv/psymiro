@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
-import { AuthLoginInfo } from 'src/app/shared/services/auth/auth.classes';
-import { AuthService } from 'src/app/shared/services/auth/auth.service';
-import { TokenStorageService } from 'src/app/shared/services/auth/token-storage.service';
+import { AuthLoginInfo } from '../../../../shared/services/auth/auth.classes';
+import { AuthService } from '../../../../shared/services/auth/auth.service';
+import { TokenStorageService } from '../../../../shared/services/auth/token-storage.service';
 
 @Component({
   selector: 'app-login',

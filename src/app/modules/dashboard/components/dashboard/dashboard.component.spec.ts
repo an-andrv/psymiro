@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MaterialModule } from 'src/material.module';
 import { of } from 'rxjs';
+import { MaterialModule } from '../../../../../material.module';
 
 import { DashboardComponent } from './dashboard.component';
 
