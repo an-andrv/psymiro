@@ -4,14 +4,15 @@ import { Observable } from 'rxjs';
 import { AuthLoginInfo, JwtResponse, SignupInfo } from './auth.classes';
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json'})
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  private loginUrl ='http://localhost:8080/api/auth/signin';
+  private loginUrl = 'http://localhost:8080/api/auth/signin';
+
   private signUrl = 'http://localhost:8080/api/auth/signup';
 
   constructor(private http: HttpClient) { }

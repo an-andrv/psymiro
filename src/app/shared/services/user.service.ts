@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
 
@@ -14,15 +14,21 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   getUserInfo(): Observable<string> {
-    return this.http.get(this.userUrl, {responseType: 'text'});
+    return this.http.get(this.userUrl, {
+      responseType: 'text',
+    });
   }
 
   getPmInfo(): Observable<string> {
-    return this.http.get(this.pmUrl, {responseType: 'text'});
+    return this.http.get(this.pmUrl, {
+      responseType: 'text',
+    });
   }
 
   getAdminInfo(): Observable<string> {
-    return this.http.get(this.adminUrl, {responseType: 'text'});
+    return this.http.get(this.adminUrl, {
+      responseType: 'text',
+    });
   }
 
 }

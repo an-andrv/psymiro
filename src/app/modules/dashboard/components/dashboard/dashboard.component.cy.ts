@@ -1,4 +1,4 @@
-import { DashboardComponent } from './dashboard.component'
+import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
   it('mounts', () => {
@@ -6,9 +6,9 @@ describe('DashboardComponent', () => {
       componentProperties: {
         pageLikes: 100,
       },
-    })
-    cy.get('[data-cy=counter]').should('have.text', '100')
-    cy.get('[data-cy=decrement]').click()
-    cy.get('[data-cy=counter]').should('have.text', '99')
-  })
-})
+    });
+    cy.get('[data-cy=counter]').should('have.text', '100');
+    cy.get('[data-cy=decrement]').click();
+    cy.get('[data-cy=counter]').should('have.text', '99');
+  });
+});

@@ -23,7 +23,7 @@ import { httpInterceptorProviders } from './shared/services/auth/auth-intercepto
     FooterComponent,
     HeaderComponent,
     StartPageComponent,
-    ExampleComponent
+    ExampleComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,11 +31,11 @@ import { httpInterceptorProviders } from './shared/services/auth/auth-intercepto
     AppRoutingModule,
     DashboardModule,
     ProfileModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [
-    httpInterceptorProviders
+    httpInterceptorProviders,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

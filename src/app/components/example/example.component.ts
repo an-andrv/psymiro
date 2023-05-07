@@ -6,14 +6,14 @@ import { map, shareReplay } from 'rxjs/operators';
 @Component({
   selector: 'app-example',
   templateUrl: './example.component.html',
-  styleUrls: ['./example.component.scss']
+  styleUrls: ['./example.component.scss'],
 })
 export class ExampleComponent {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
-      shareReplay()
+      shareReplay(),
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}

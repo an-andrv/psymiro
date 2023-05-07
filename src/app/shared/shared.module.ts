@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-const services = [];
-const pipes = [];
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
   ],
-  exports: [
-  ]
+  exports: [],
 })
 export class SharedModule { }

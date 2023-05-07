@@ -1,7 +1,7 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { TokenStorageService } from "../../shared/services/auth/token-storage.service";
-import { MaterialModule } from "../../../material.module";
-import { ProfileComponent } from "./profile.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TokenStorageService } from '../../shared/services/auth/token-storage.service';
+import { MaterialModule } from '../../../material.module';
+import { ProfileComponent } from './profile.component';
 
 describe('LoginComponnet', () => {
   let component: ProfileComponent;
@@ -11,9 +11,8 @@ describe('LoginComponnet', () => {
     await TestBed.configureTestingModule({
       declarations: [ ProfileComponent ],
       imports: [ MaterialModule ],
-      providers: [ TokenStorageService ]
-    })
-    .compileComponents();
+      providers: [ TokenStorageService ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;

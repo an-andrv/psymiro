@@ -5,10 +5,10 @@ import { Info } from './models/user.model';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
-
+  
   info = {} as Info;
 
   constructor(private tokenService: TokenStorageService) { }
@@ -17,8 +17,8 @@ export class ProfileComponent implements OnInit {
     this.info = {
       token: this.tokenService.getToken(),
       username: this.tokenService.getUsername(),
-      authorities: this.tokenService.getAuthorities()
-    }
+      authorities: this.tokenService.getAuthorities(),
+    };
   }
 
   logout() {

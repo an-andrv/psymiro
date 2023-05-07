@@ -1,4 +1,4 @@
-import { Lang } from "./translate.models";
+import { Lang } from './translate.models';
 
 export interface Language {
   code: Lang;

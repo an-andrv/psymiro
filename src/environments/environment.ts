@@ -1,6 +1,6 @@
-import { urls } from "./urls";
+import { urls } from './urls';
 
 export const environment = {
   production: false,
-  urls: urls
+  urls: urls,
 };

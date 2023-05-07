@@ -5,10 +5,9 @@ const USERNAME_KEY = 'AuthUsername';
 const AUTHORITIES_KEY = 'Authorities';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TokenStorageService {
-  constructor() { }
 
   signOut(): void {
     sessionStorage.clear();
@@ -41,9 +40,10 @@ export class TokenStorageService {
 
   getAuthorities(): string[] {
     const roles: string[] = [];
+    const authoritiesKeys = sessionStorage.getItem(AUTHORITIES_KEY);
 
-    if (sessionStorage.getItem(TOKEN_KEY)) {
-      JSON.parse(sessionStorage.getItem(AUTHORITIES_KEY)!).forEach((el: string) => {
+    if (authoritiesKeys) {
+      JSON.parse(authoritiesKeys).forEach((el: string) => {
         roles.push(el);
       });
     }

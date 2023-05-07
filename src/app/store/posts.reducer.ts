@@ -1,6 +1,6 @@
-// import { Action, createReducer, on } from "@ngrx/store";
-// import { Post } from "@shared/models/posts.interfaces";
-// import { PostsActions } from "./posts.actions";
+// import { Action, createReducer, on } from '@ngrx/store';
+// import { Post } from '@shared/models/posts.interfaces';
+// import { PostsActions } from './posts.actions';
 
 // export interface State {
 //   rate: number;
