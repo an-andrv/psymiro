@@ -1,10 +1,11 @@
 name: Deploy App
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
-    # paths-ignore:
-    #   - '.github/workflows/*'
+    paths-ignore:
+      - '.github/workflows/*'
 jobs:
   test_app:
     runs-on: ubuntu-latest
