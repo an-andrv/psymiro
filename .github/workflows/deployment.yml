@@ -1,5 +1,5 @@
 name: Deploy App
-on: push
+on: workflow_dispatch
 jobs:
   test_app:
     runs-on: ubuntu-latest
