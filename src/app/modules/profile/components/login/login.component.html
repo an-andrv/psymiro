@@ -34,7 +34,8 @@
     </div>
     <div>
       <label for="password">Password:</label>
-      <input type="password" name="password" [(ngModel)]="loginForm.password" id="password" #p="ngModel" required minLength="6" autocomplete>
+      <input type="password" name="password" [(ngModel)]="loginForm.password" 
+      id="password" #p="ngModel" required minLength="6" autocomplete>
       <div *ngIf="f.submitted && u.invalid">
         <div *ngIf="p.value.required">Password is required</div>
         <div *ngIf="p.invalid">Password must be at least 6 characters</div>

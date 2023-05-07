@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { MaterialModule } from "../../../../../material.module";
-import { SignupComponent } from "./signup.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MaterialModule } from '../../../../../material.module';
+import { SignupComponent } from './signup.component';
 
 describe('LoginComponnet', () => {
   let component: SignupComponent;
@@ -9,9 +9,8 @@ describe('LoginComponnet', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ SignupComponent ],
-      imports: [ MaterialModule ]
-    })
-    .compileComponents();
+      imports: [ MaterialModule ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SignupComponent);
     component = fixture.componentInstance;

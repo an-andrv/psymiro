@@ -119,12 +119,22 @@
               "devServerTarget": "psymiro:serve:production"
             }
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.component.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
     "schematicCollections": [
+      "@angular-eslint/schematics",
       "@cypress/schematic",
       "@schematics/angular"
     ]

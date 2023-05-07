@@ -16,7 +16,7 @@ import { MaterialModule } from 'src/material.module';
     ProfileComponent,
     UserComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
   ],
   imports: [
     CommonModule,
@@ -24,8 +24,8 @@ import { MaterialModule } from 'src/material.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
   ],
-  bootstrap: [ProfileComponent]
+  bootstrap: [ProfileComponent],
 })
 export class ProfileModule { }

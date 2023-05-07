@@ -13,8 +13,8 @@ describe('ExampleComponent', () => {
       declarations: [ExampleComponent],
       imports: [
         MaterialModule,
-        BrowserAnimationsModule
-      ]
+        BrowserAnimationsModule,
+      ],
     }).compileComponents();
   }));
 

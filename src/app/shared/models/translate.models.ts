@@ -1,4 +1,4 @@
-import { Language } from "./translate.interfaces";
+import { Language } from './translate.interfaces';
 
 export enum Lang {
   en = 'en',
@@ -7,7 +7,7 @@ export enum Lang {
   it = 'it',
   es = 'es',
   nl = 'nl',
-  jp = 'jp'
+  jp = 'jp',
 }
 
 export const SITE_LANGUAGES: Language[] = [
@@ -17,7 +17,7 @@ export const SITE_LANGUAGES: Language[] = [
   { code: Lang.it, name: 'Italiano', shortname: 'ITA' },
   { code: Lang.es, name: 'Español', shortname: 'ESL' },
   { code: Lang.nl, name: 'Nederlands', shortname: 'NLD' },
-  { code: Lang.jp, name: '日本語', shortname: 'JPN' }
+  { code: Lang.jp, name: '日本語', shortname: 'JPN' },
 ];
 
 export const DEFAULT_LANGUAGE = Lang.en;

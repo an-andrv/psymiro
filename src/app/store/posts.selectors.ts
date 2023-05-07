@@ -1,5 +1,5 @@
-// import { createFeatureSelector, createSelector } from "@ngrx/store";
-// import { State } from "./posts.reducer";
+// import { createFeatureSelector, createSelector } from '@ngrx/store';
+// import { State } from './posts.reducer';
 
 // export namespace PostsSelectors {
 //   export const state = createFeatureSelector<State>("posts");

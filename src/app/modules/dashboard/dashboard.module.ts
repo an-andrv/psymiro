@@ -14,17 +14,17 @@ const routes: Routes = [
   {
     path: '**',
     component: DashboardComponent,
-  }
+  },
 ];
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+  ],
 })
 export class DashboardModule { }

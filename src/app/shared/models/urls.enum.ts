@@ -3,5 +3,5 @@ export enum PageUrlEnum {
   profile = 'profile',
   user = 'user',
   login = 'login',
-  signup = 'signup'
+  signup = 'signup',
 }

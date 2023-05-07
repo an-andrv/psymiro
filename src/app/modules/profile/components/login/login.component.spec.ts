@@ -1,11 +1,11 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { AuthService } from "../../../../shared/services/auth/auth.service";
-import { TokenStorageService } from "../../../../shared/services/auth/token-storage.service";
-import { MaterialModule } from "../../../../../material.module";
-import { LoginComponent } from "./login.component";
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AuthService } from '../../../../shared/services/auth/auth.service';
+import { TokenStorageService } from '../../../../shared/services/auth/token-storage.service';
+import { MaterialModule } from '../../../../../material.module';
+import { LoginComponent } from './login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('LoginComponnet', () => {
   let component: LoginComponent;
@@ -19,14 +19,13 @@ describe('LoginComponnet', () => {
         HttpClientModule,
         FormsModule,
         ReactiveFormsModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
       ],
       providers: [
         TokenStorageService,
-        AuthService
-      ]
-    })
-    .compileComponents();
+        AuthService,
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;

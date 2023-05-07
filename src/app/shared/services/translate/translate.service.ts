@@ -4,11 +4,9 @@ import { DEFAULT_LANGUAGE, SITE_LANGUAGES } from '../../models/translate.models'
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TranslateService {
-
-  constructor() { }
 
   get() {
     return SITE_LANGUAGES.find(lang => lang.code === DEFAULT_LANGUAGE);

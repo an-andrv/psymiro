@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { AuthLoginInfo } from '../../../../shared/services/auth/auth.classes';
@@ -8,9 +8,9 @@ import { TokenStorageService } from '../../../../shared/services/auth/token-stor
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit, OnDestroy {
   nameFormControl = new FormControl('', [Validators.required]);
   passwordFormControl = new FormControl('', [Validators.required, Validators.maxLength(6)]);
 
@@ -49,7 +49,7 @@ export class LoginComponent {
         error: e => {
           this.errorMessage = e.error.message;
           this.isLoginFailed = true;
-        }
+        },
       });
   }
 

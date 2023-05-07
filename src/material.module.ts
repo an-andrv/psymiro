@@ -109,6 +109,6 @@ const materialModules = [
   exports: [
     cdkModules,
     materialModules,
-  ]
+  ],
 })
 export class MaterialModule {}

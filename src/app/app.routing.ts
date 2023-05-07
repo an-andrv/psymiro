@@ -8,14 +8,14 @@ const routes: Routes = [
     path: '',
     children: [
       { path: '', component: StartPageComponent, pathMatch: 'full' },
-      { path: PageUrlEnum.profile, loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule)},
-      { path: PageUrlEnum.dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
-    ]
-  }
+      { path: PageUrlEnum.profile, loadChildren: () => import('./modules/profile/profile.module').then(m => m.ProfileModule) },
+      { path: PageUrlEnum.dashboard, loadChildren: () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule) },
+    ],
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }

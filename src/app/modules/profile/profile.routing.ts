@@ -8,21 +8,21 @@ import { ProfileComponent } from './profile.component';
 
 const routes: Routes = [
   {
-    path: '', component: ProfileComponent
+    path: '', component: ProfileComponent,
   },
   {
-    path: PageUrlEnum.user, component: UserComponent
+    path: PageUrlEnum.user, component: UserComponent,
   },
   {
-    path: PageUrlEnum.login, component: LoginComponent
+    path: PageUrlEnum.login, component: LoginComponent,
   },
   {
-    path: PageUrlEnum.signup, component: SignupComponent
-  }
+    path: PageUrlEnum.signup, component: SignupComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ProfileRoutingModule { }

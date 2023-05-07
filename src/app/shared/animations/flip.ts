@@ -1,4 +1,4 @@
-import { animate, AnimationTriggerMetadata, state, style, transition, trigger } from "@angular/animations";
+import { animate, AnimationTriggerMetadata, state, style, transition, trigger } from '@angular/animations';
 
 export const ANIMATION_FLIP: AnimationTriggerMetadata = trigger('flip', [
   state('false', style({ transform: 'rotateY(0deg) translateZ(1px)' })),
