@@ -7,6 +7,7 @@ This **Kudos Dashboard** project includes development using technologies:
 - domainSSL certificate for **https://www.psymiro.com**
 
 And will also continue to be updated with features based on the following technologies:
+- Авторизация
 - NgRx store
 - Angular Animation
 - Storybook https://storybook.js.org/
