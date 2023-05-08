@@ -1,10 +1,15 @@
-This **Kudos Dashboard project** will continue some features:
-- github CI/CD
-- Angular SSR
-- ...
-*the list will continue to grow*
-
-Also this project includes:
+This **Kudos Dashboard** project includes development using technologies:
+- Github Actions and workflows
+- Eslint checking
+- Jest for unit tests and Cypress for integration and e2e testing
+- Angular Materials
+- Routing
 - domainSSL certificate for **https://www.psymiro.com**
 
-What about **project target** - the first step is to develop the **board** with some **kudos of yours**.
+And will also continue to be updated with features based on the following technologies:
+- NgRx store
+- Angular Animation
+- Storybook https://storybook.js.org/
+- Angular SSR
+- ...
+*the list will continue to grow* 
