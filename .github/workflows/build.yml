@@ -1,4 +1,4 @@
-name: Build
+name: Get Artifact - Build & Deploy
 on: [push, workflow_dispatch]
 jobs:
   build:
@@ -13,7 +13,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          path: build
+          path: dist/psymiro
           name: build-project
   deploy:
     needs: build
