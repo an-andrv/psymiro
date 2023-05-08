@@ -41,7 +41,7 @@ jobs:
     strategy:
       matrix:
         node-version: [14, 16]
-        os: [ubuntu-latest, window-latest]
+        os: [ubuntu-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Getting repository code
